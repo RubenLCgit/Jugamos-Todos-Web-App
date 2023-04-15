@@ -10,9 +10,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @ToString
 public class Torneo {
-    private int id_torneo;
-    private int id_club;
-    private int id_juego;
+    private String id_torneo;
+    private String id_club;
+    private String id_juego;
 
     private LocalDate fecha;
     @NonNull
