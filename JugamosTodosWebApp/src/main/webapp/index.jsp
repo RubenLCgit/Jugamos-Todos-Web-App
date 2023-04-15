@@ -7,5 +7,8 @@
 <body>
     <h1>Jugamos Todos</h1>
     <p>Gestiona tus juegos y eventos</p>
+    <%
+
+    %>
 </body>
 </html>
