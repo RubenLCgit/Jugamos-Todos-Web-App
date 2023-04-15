@@ -1,3 +1,7 @@
+<%@ page import= "com.svalero.dao.Database"%>
+<%@ page import= "com.svalero.dao.ClubDAO"%>
+<%@ page import= "com.svalero.models.Club"%>
+<%@ page import= "java.util.List"%>
 <!doctype html>
 <html lang="es" data-bs-theme="auto">
   <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -201,7 +205,10 @@
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
     <%
-
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        Database.connect();
+        List<Club> clubs = Database.jdbi.withExtension(ClubDAO.class, ClubDAO::getClub);
+        for (Club club : clubs){
     %>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
@@ -220,6 +227,9 @@
           </div>
         </div>
       </div>
+      <%
+        }
+      %>
     </div>
   </div>
 
