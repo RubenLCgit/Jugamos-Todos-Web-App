@@ -6,7 +6,7 @@
 </head>
 <body>
 <%
-    String clubId = request.getParameter("nom_calle");
+    String clubId = request.getParameter("id");
     out.print(clubId);
 %>
 </body>
