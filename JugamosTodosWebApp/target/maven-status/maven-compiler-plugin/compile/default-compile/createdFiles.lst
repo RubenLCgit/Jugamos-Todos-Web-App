@@ -1,4 +1,5 @@
 com\svalero\models\Juego.class
+com\svalero\dao\Database.class
 com\svalero\models\Torneo.class
 com\svalero\dao\JuegoMapper.class
 com\svalero\dao\ClubDAO.class

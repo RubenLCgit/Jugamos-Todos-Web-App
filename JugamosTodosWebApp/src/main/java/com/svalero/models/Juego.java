@@ -10,15 +10,13 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 public class Juego {
-    private String id_jue_pk;
+    private String id;
     @NonNull
-    private String nombre;
+    private String nomJuego;
     @NonNull
     private int max_jug;
     @NonNull
     private String tipo;
     @NonNull
     private int duracion_max;
-
-    private List<Club> clubs;
 }

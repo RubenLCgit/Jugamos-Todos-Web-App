@@ -11,7 +11,7 @@ import java.util.List;
 public interface ClubDAO {
     @SqlQuery("SELECT * FROM CLUB")
     @UseRowMapper(ClubMapper.class)
-    List<Club> getClub()throws SQLException;
+    List<Club> getClubs()throws SQLException;
 
     @SqlUpdate("INSERT INTO CLUB(NOMBRE, CALLE, NUMERO, CP, HORARIO_APERT, HORARIO_CIER) VALUES (?, ?, ?, ?, ?, ?)")
     void crearClub (String nomClub, String nomCalle, String numCalle, String cp, String hor_apert, String hor_cier)throws SQLException;

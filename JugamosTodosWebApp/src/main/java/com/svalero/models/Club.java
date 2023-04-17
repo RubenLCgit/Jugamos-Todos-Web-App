@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class Club {
-    private String id_club_pk;
+    private String id;
     @NonNull
     private String nom_club;
     @NonNull

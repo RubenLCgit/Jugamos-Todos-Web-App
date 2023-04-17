@@ -1,3 +1,7 @@
+<%@ page import= "com.svalero.dao.Database"%>
+<%@ page import= "com.svalero.dao.ClubDAO"%>
+<%@ page import= "com.svalero.models.Club"%>
+<%@ page import= "java.util.List"%>
 <!doctype html>
 <html lang="es" data-bs-theme="auto">
   <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -191,35 +195,15 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Aplicación para gestión de Juegos y Eventos</h1>
         <p>
-          <a href="/add-club.jsp" class="btn btn-dark my-2">Registrar club</a>
-          <a href="/add-juego.jsp" class="btn btn-dark my-2">Registrar juego de mesa</a>
+          <a href="get-games.jsp" class="btn btn-dark my-2">Mostrar Juegos</a>
+          <a href="get-clubs.jsp" class="btn btn-dark my-2">Mostrar Clubs</a>
+          <a href="add-club.jsp" class="btn btn-dark my-2">Registrar club</a>
+          <a href="add-game.jsp" class="btn btn-dark my-2">Registrar juego</a>
+          <button type="button" class="btn btn-outline-secondary">Página principal</button>
         </p>
       </div>
     </div>
   </section>
-
-  <div class="album py-5 bg-body-tertiary">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver detalles del club</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Modificar detalles del club</button>
-                </div>
-                <small class="text-body-secondary">NombreClub</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </main>
 
