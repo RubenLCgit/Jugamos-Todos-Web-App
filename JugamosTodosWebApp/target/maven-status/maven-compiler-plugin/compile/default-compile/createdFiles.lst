@@ -4,6 +4,7 @@ com\svalero\models\Torneo.class
 com\svalero\dao\JuegoMapper.class
 com\svalero\dao\ClubDAO.class
 com\svalero\dao\ClubMapper.class
+com\svalero\servlet\AddClubServlet.class
 com\svalero\models\Club.class
 com\svalero\models\Jugador.class
 com\svalero\Utils\Constants.class
