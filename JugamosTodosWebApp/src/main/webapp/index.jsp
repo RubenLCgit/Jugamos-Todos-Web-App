@@ -15,8 +15,8 @@
         <p>
           <a href="get-games.jsp" class="btn btn-dark my-2">Mostrar Juegos</a>
           <a href="get-clubs.jsp" class="btn btn-dark my-2">Mostrar Clubs</a>
-          <a href="add-club.jsp" class="btn btn-dark my-2">Registrar club</a>
-          <a href="add-game.jsp" class="btn btn-dark my-2">Registrar juego</a>
+          <a href="register-club.jsp" class="btn btn-dark my-2">Registrar club</a>
+          <a href="register-game.jsp" class="btn btn-dark my-2">Registrar juego</a>
           <button type="button" class="btn btn-outline-secondary">Página principal</button>
         </p>
       </div>
