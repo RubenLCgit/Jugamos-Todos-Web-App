@@ -13,6 +13,10 @@ public interface ClubDAO {
     @UseRowMapper(ClubMapper.class)
     List<Club> getClubs()throws SQLException;
 
+    @SqlQuery("SELECT * FROM CLUB WHERE ID_CLUB = ?")
+    @UseRowMapper(ClubMapper.class)
+    Club getClub(String id);
+
     @SqlUpdate("INSERT INTO CLUB(NOMBRE, CALLE, NUMERO, CP, HORARIO_APERT, HORARIO_CIER) VALUES (?, ?, ?, ?, ?, ?)")
     void crearClub (String nomClub, String nomCalle, String numCalle, String cp, String hor_apert, String hor_cier)throws SQLException;
 
