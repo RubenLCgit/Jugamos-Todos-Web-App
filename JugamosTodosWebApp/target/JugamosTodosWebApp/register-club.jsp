@@ -6,6 +6,18 @@
 <%@page pageEncoding="UTF-8"%>
 <%@include file="includes/header.jsp"%>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("add-club", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+
 <main>
 
 <section class="py-5 text-center container">
@@ -25,7 +37,7 @@
 
   <div class="container">
 
-      <form class="row g-3" action="add-club" method="post">
+      <form class="row g-3">
         <div class="col-md-6">
           <label for="nombreClub" class="form-label">Nombre del Club</label>
           <input type="text" class="form-control" id="nombreClub" name="nom_club" placeholder="Introducir aquí nombre del juego">
@@ -54,6 +66,8 @@
           <button type="submit" class="btn btn-primary">Registrar</button>
         </div>
       </form>
+      <br/>
+      <div id="result"></div>
   </div>
 
 </main>

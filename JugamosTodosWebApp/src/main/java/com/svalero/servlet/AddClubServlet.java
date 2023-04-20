@@ -35,7 +35,7 @@ public class AddClubServlet extends HttpServlet {
                dao.crearClub(nom_club.trim(),nom_calle.trim(),num_calle.trim(),cp.trim(),hor_apert.trim(),hor_cierre.trim());
                return null;
            });
-           out.println("Club registrado correctamente");
+           out.println("<div class='alert alert-dark' role='alert'>Club registrado correctamente</div>");
        } catch (SQLException e) {
            throw new RuntimeException(e);
        }
