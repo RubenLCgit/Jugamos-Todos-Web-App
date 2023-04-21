@@ -43,7 +43,6 @@
                     <a href="view-details.jsp?id=<%= club.getId() %>" class="btn btn-sm btn-outline-secondary">Ver detalles del club</a>
                     <a href="edit-club.jsp?id=<%= club.getId() %>" class="btn btn-sm btn-outline-secondary">Modificar detalles del club</a>
                   </div>
-                  <small class="text-muted"><%= club.getCp()%></small>
                 </div>
               </div>
             </div>

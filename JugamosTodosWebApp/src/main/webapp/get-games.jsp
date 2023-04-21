@@ -43,7 +43,6 @@
                   <a href="view-details2.jsp?id=<%= juego.getId() %>" class="btn btn-sm btn-outline-secondary">Ver detalles del juego</a>
                   <a href="editar-club.jsp?id=<%= juego.getId() %>" class="btn btn-sm btn-outline-secondary">Modificar detalles del juego</a>
                 </div>
-                <small class="text-muted"><%= juego.getDuracion_max()%></small>
               </div>
             </div>
           </div>
