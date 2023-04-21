@@ -1,5 +1,6 @@
 package com.svalero.dao;
 
+import com.svalero.models.Club;
 import com.svalero.models.Juego;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
@@ -11,7 +12,11 @@ import java.util.List;
 public interface JuegoDAO {
     @SqlQuery("SELECT * FROM JUEGOS")
     @UseRowMapper(JuegoMapper.class)
-    List<Juego> getJuegos()throws SQLException;;
+    List<Juego> getJuegos()throws SQLException;
+
+    @SqlQuery("SELECT * FROM JUEGOS WHERE ID_JUEGO = ?")
+    @UseRowMapper(JuegoMapper.class)
+    Juego getJuego(String id);
 
     @SqlUpdate("INSERT INTO JUEGOS(NOMBRE, MAX_JUGADORES, DURACION_MIN, TIPO) VALUES (?, ?, ?, ?)")
     void crearJuego (String nombre, int max_jug, int duracion_max, String tipo)throws SQLException;;
