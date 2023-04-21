@@ -40,7 +40,7 @@
       <form class="row g-3">
         <div class="col-md-6">
           <label for="nombreClub" class="form-label">Nombre del Club</label>
-          <input type="text" class="form-control" id="nombreClub" name="nom_club" placeholder="Introducir aquí nombre del juego">
+          <input type="text" class="form-control" id="nombreClub" name="nom_club" placeholder="Introducir aquí nombre del club">
         </div>
         <div class="col-md-6">
           <label for="nombreCalle" class="form-label">Dirección</label>

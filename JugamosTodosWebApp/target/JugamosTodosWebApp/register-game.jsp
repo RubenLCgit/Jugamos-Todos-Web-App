@@ -1,10 +1,22 @@
 <%@ page import= "com.svalero.dao.Database"%>
-<%@ page import= "com.svalero.dao.ClubDAO"%>
-<%@ page import= "com.svalero.models.Club"%>
+<%@ page import= "com.svalero.dao.JuegoDAO"%>
+<%@ page import= "com.svalero.models.Juego"%>
 <%@ page import= "java.util.List"%>
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
 <%@include file="includes/header.jsp"%>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("add-game", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
 
 <main>
 
@@ -22,6 +34,33 @@
       </div>
     </div>
 </section>
+
+<div class="container">
+
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="nombreJuego" class="form-label">Nombre del Club</label>
+          <input type="text" class="form-control" id="nombreJuego" name="nomJuego" placeholder="Introducir aquí nombre del juego">
+        </div>
+        <div class="col-md-2">
+          <label for="max_jug" class="form-label">Máximo de jugadores</label>
+          <input type="text" class="form-control" id="max_jug" name="max_jug" placeholder="Introduce un número. Ejemplo: 4">
+        </div>
+        <div class="col-md-2">
+            <label for="tipo" class="form-label">Tipo de juego</label>
+            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Ejemplo: Eurogame">
+        </div>
+        <div class="col-md-2">
+            <label for="duracion_max" class="form-label">Duración máxima</label>
+            <input type="text" class="form-control" id="duracion_max" name="duracion_max" placeholder="Duración en minutos">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+      </form>
+      <br/>
+      <div id="result"></div>
+  </div>
 
 </main>
 
