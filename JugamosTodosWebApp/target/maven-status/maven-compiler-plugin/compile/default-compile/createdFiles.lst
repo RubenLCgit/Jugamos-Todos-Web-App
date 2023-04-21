@@ -9,3 +9,4 @@ com\svalero\models\Club.class
 com\svalero\models\Jugador.class
 com\svalero\Utils\Constants.class
 com\svalero\dao\JuegoDAO.class
+com\svalero\servlet\AddJuegoServlet.class

@@ -40,8 +40,8 @@
                 <p class="card-text"> NOMBRE : <%= club.getNom_club()%>   ||  HORARIO DE APERTURA : <%= club.getHor_apert()%></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="ver-detalles.jsp?id=<%= club.getId() %>" class="btn btn-sm btn-outline-secondary">Ver detalles del club</a>
-                    <a href="editar-club.jsp?id=<%= club.getId() %>" class="btn btn-sm btn-outline-secondary">Modificar detalles del club</a>
+                    <a href="view-details.jsp?id=<%= club.getId() %>" class="btn btn-sm btn-outline-secondary">Ver detalles del club</a>
+                    <a href="edit-club.jsp?id=<%= club.getId() %>" class="btn btn-sm btn-outline-secondary">Modificar detalles del club</a>
                   </div>
                   <small class="text-muted"><%= club.getCp()%></small>
                 </div>
