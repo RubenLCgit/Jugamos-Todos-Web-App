@@ -47,6 +47,9 @@
     </div>
   </section>
 
+  <img src="https://analisisalcubo.es/wp-content/uploads/2015/07/IMG_6393-1024x768.jpg" class="card-img-top" alt="Estanteria con juegos de mesa" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+  <br/><br/>
+
   <div class="container">
         <h3>BUSCAR CLUB</h3>
         <br/>
