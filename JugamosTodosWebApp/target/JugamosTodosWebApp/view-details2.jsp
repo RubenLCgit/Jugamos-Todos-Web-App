@@ -5,6 +5,51 @@
 <%@page pageEncoding="UTF-8"%>
 <%@include file="includes/header.jsp"%>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form1").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-nomJuego", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form2").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-tipoJuego", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form3").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-duracionJuego", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form4").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-maxJugadoresJuego", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+
 <main>
 
 <section class="py-5 text-center container">
@@ -33,13 +78,68 @@
     <div class="card mb-3">
       <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
-        <h1>NOMBRE DEL JUEGO: <span class="badge bg-secondary"><%= juego.getNomJuego() %></span></h1>
-        <ul class="list-group">
-          <li class="list-group-item list-group-item-dark">ID ASIGNADO EN LA BASE DE DATOS: <%= juego.getId() %></li>
-          <li class="list-group-item list-group-item-dark">TIPO DE JUEGO: <%= juego.getTipo() %></li>
-          <li class="list-group-item list-group-item-dark">MÁXIMO DE JUGADORES: <%= juego.getMax_jug() %></li>
-          <li class="list-group-item list-group-item-dark">DURACIÓN MÁXIMA: <%= juego.getDuracion_max() %></li>
-        </ul>
+
+        <form class="row g-3" id="form1">
+            <div class="col-auto">
+                <h3>NOMBRE DEL JUEGO:<span class="badge bg-secondary"><%= juego.getNomJuego() %></span></h3>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" id="updateNomJuego" name="nomJuego" required placeholder="Nuevo nombre">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= juego.getId() %>">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form2">
+            <div class="col-auto">
+              <h3>TIPO DE JUEGO: <span class="badge bg-secondary"><%= juego.getTipo() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateTipoJuego" name="tipo" required placeholder="Nueva tipo">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= juego.getId() %>">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form3">
+            <div class="col-auto">
+              <h3>DURACIÓN MAXIMA DEL JUEGO: <span class="badge bg-secondary"><%= juego.getDuracion_max() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateDuracion" name="duracion_max" required placeholder="Nueva duración">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= juego.getId() %>">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form4">
+            <div class="col-auto">
+              <h3>MÁXIMO NÚMERO DE JUGADORES: <span class="badge bg-secondary"><%= juego.getMax_jug() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateMaxJug" name="max_jug" required placeholder="Nueva Duración">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= juego.getId() %>">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+        <br/>
+        <div id="result"></div>
       </div>
     </div>
 </div>
