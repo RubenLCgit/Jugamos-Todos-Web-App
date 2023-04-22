@@ -7,6 +7,7 @@ com\svalero\servlet\AddClubServlet.class
 com\svalero\servlet\UpdateCierreClubServlet.class
 com\svalero\servlet\UpdateJugadoresJuegoServlet.class
 com\svalero\servlet\UpdateNombreJuegoServlet.class
+com\svalero\servlet\DeleteJuegoServlet.class
 com\svalero\servlet\UpdateNombreClubServlet.class
 com\svalero\servlet\UpdateTipoJuegoServlet.class
 com\svalero\servlet\UpdateAperturaClubServlet.class
@@ -14,6 +15,7 @@ com\svalero\Utils\Constants.class
 com\svalero\dao\JuegoDAO.class
 com\svalero\models\Juego.class
 com\svalero\models\Torneo.class
+com\svalero\servlet\DeleteClubServlet.class
 com\svalero\dao\ClubMapper.class
 com\svalero\servlet\UpdateCalleClubServlet.class
 com\svalero\servlet\UpdateDuracionJuegoServlet.class
