@@ -40,8 +40,8 @@
               <p class="card-text"> NOMBRE : <%= juego.getNomJuego()%>   ||  TIPO : <%= juego.getTipo()%></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="view-details2.jsp?id=<%= juego.getId() %>" class="btn btn-sm btn-outline-secondary">Ver detalles del juego</a>
-                  <a href="editar-club.jsp?id=<%= juego.getId() %>" class="btn btn-sm btn-outline-secondary">Modificar detalles del juego</a>
+                  <a href="view-details2.jsp?id=<%= juego.getId() %>" class="btn btn-primary">Ver detalles del juego</a>
+                  <a href="eliminar-juego?id=<%= juego.getId() %>" class="btn btn-danger">Eliminar juego</a>
                 </div>
               </div>
             </div>
