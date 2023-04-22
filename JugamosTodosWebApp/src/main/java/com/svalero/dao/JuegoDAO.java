@@ -19,10 +19,10 @@ public interface JuegoDAO {
     Juego getJuego(String id);
 
     @SqlUpdate("INSERT INTO JUEGOS(NOMBRE, MAX_JUGADORES, DURACION_MIN, TIPO) VALUES (?, ?, ?, ?)")
-    void crearJuego (String nombre, int max_jug, int duracion_max, String tipo)throws SQLException;;
+    void crearJuego (String nombre, int max_jug, int duracion_max, String tipo)throws SQLException;
 
-    @SqlUpdate("DELETE FROM JUEGOS WHERE NOMBRE= ?")
-    void borrarJuego (String nombre)throws SQLException;;
+    @SqlUpdate("DELETE FROM JUEGOS WHERE ID_JUEGO= ?")
+    void borrarJuego (String id)throws SQLException;
 
     @SqlUpdate("UPDATE JUEGOS SET NOMBRE = ? WHERE ID_JUEGO = ?")
     void modificarNomJuego (String nombre,String id)throws SQLException;
@@ -38,7 +38,7 @@ public interface JuegoDAO {
 
     @SqlQuery("SELECT * FROM JUEGOS WHERE NOMBRE= ? OR TIPO= ?")// TODO -- CON ANOTACIONES SI NO INTRODUZCO LOS DOS VALORES, NO ME MUESTRA NADA
     @UseRowMapper(JuegoMapper.class)
-    List<Juego> buscarJuegos(String nomJue, String tipo)throws SQLException;;
+    List<Juego> buscarJuegos(String nomJue, String tipo)throws SQLException;
 
     @SqlQuery("SELECT * FROM JUEGOS WHERE NOMBRE= ?")//
     @UseRowMapper(JuegoMapper.class)

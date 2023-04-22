@@ -20,8 +20,8 @@ public interface ClubDAO {
     @SqlUpdate("INSERT INTO CLUB(NOMBRE, CALLE, NUMERO, CP, HORARIO_APERT, HORARIO_CIER) VALUES (?, ?, ?, ?, ?, ?)")
     void crearClub (String nomClub, String nomCalle, String numCalle, String cp, String hor_apert, String hor_cier)throws SQLException;
 
-    @SqlUpdate("DELETE FROM CLUB WHERE NOMBRE= ?")
-    void borrarClub (String nomClub)throws SQLException;
+    @SqlUpdate("DELETE FROM CLUB WHERE ID_CLUB= ?")
+    void borrarClub (String id)throws SQLException;
 
     @SqlUpdate("UPDATE CLUB SET HORARIO_APERT = ? WHERE NOMBRE = ?")
     void modificarClub (String horario_apert, String nombre)throws SQLException;

@@ -14,6 +14,7 @@ com\svalero\Utils\Constants.class
 com\svalero\dao\JuegoDAO.class
 com\svalero\models\Juego.class
 com\svalero\models\Torneo.class
+com\svalero\servlet\DeleteClubServlet.class
 com\svalero\dao\ClubMapper.class
 com\svalero\servlet\UpdateCalleClubServlet.class
 com\svalero\servlet\UpdateDuracionJuegoServlet.class

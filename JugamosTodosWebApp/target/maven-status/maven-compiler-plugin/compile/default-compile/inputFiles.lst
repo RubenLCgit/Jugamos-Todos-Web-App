@@ -7,6 +7,7 @@ C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\AddJuegoServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\models\Club.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateJugadoresJuegoServlet.java
+C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\DeleteClubServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\dao\ClubDAO.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\AddClubServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateDuracionJuegoServlet.java
