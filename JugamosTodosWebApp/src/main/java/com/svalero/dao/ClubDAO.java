@@ -26,6 +26,9 @@ public interface ClubDAO {
     @SqlUpdate("UPDATE CLUB SET HORARIO_APERT = ? WHERE NOMBRE = ?")
     void modificarClub (String horario_apert, String nombre)throws SQLException;
 
+    @SqlUpdate("UPDATE CLUB SET NOMBRE = ? WHERE ID_CLUB = ?")
+    void modificarNomClub (String nom_club, String id)throws SQLException;
+
     @SqlQuery("SELECT * FROM CLUB WHERE NOMBRE= ? OR CP= ?")// TODO -- CON ANOTACIONES SI NO INTRODUZCO LOS DOS VALORES, NO ME MUESTRA NADA
     @UseRowMapper(ClubMapper.class)
     List<Club> buscarClub(String nomClub, String cp)throws SQLException;
