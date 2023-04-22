@@ -5,6 +5,73 @@
 <%@page pageEncoding="UTF-8"%>
 <%@include file="includes/header.jsp"%>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form1").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-nomClub", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form2").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-calleClub", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form3").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-numCalle", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form4").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-CpClub", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form5").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-aperturaClub", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#form6").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("update-cierreClub", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+
 <main>
 
 <section class="py-5 text-center container">
@@ -33,15 +100,98 @@
     <div class="card mb-3">
       <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
-        <h1>NOMBRE DEL CLUB: <span class="badge bg-secondary"><%= club.getNom_club() %></span></h1>
-        <ul class="list-group">
-          <li class="list-group-item list-group-item-dark">ID ASIGNADO EN LA BASE DE DATOS: <%= club.getId() %></li>
-          <li class="list-group-item list-group-item-dark">NOMBRE DE LA CALLE / AVENIDA: <%= club.getNom_calle() %></li>
-          <li class="list-group-item list-group-item-dark">NÚMERO DE PISO / BLOQUE / LOCAL: <%= club.getNum_calle() %></li>
-          <li class="list-group-item list-group-item-dark">CÓDIGO POSTAL: <%= club.getCp() %></li>
-          <li class="list-group-item list-group-item-dark">HORARIO DE APERTURA: <%= club.getHor_apert() %></li>
-          <li class="list-group-item list-group-item-dark">HORARIO DE CIERRE: <%= club.getHor_cierre() %></li>
-        </ul>
+
+        <form class="row g-3" id="form1">
+            <div class="col-auto">
+                <h3>NOMBRE DEL CLUB:<span class="badge bg-secondary"><%= club.getNom_club() %></span>  <span class="badge bg-secondary">ID : <%= club.getId() %></span></h3>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" id="updateNomClub" name="nom_club" required placeholder="Nuevo nombre">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= club.getId() %>">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form2">
+            <div class="col-auto">
+              <h3>NOMBRE DE LA CALLE / AVENIDA: <span class="badge bg-secondary"><%= club.getNom_calle() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateNomCalle" name="nom_calle" required placeholder="Nueva calle">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= club.getId() %>">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form3">
+            <div class="col-auto">
+              <h3>NÚMERO DE PISO / BLOQUE / LOCAL: <span class="badge bg-secondary"><%= club.getNum_calle() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateNumCalle" name="num_calle" required placeholder="Nuevo número de calle">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= club.getId() %>">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form4">
+            <div class="col-auto">
+              <h3>CÓDIGO POSTAL: <span class="badge bg-secondary"><%= club.getCp() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateCp" name="cp" required placeholder="Nuevo código postal">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= club.getId() %>">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form5">
+            <div class="col-auto">
+              <h3>HORARIO DE APERTURA: <span class="badge bg-secondary"><%= club.getHor_apert() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateHorApert" name="hor_apert" required placeholder="Nuevo horario de apertura">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= club.getId() %>">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+
+        <form class="row g-3" id="form6">
+            <div class="col-auto">
+              <h3>HORARIO DE CIERRE: <span class="badge bg-secondary"><%= club.getHor_cierre() %></span></h3>
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="updateHorCier" name="hor_cierre" required placeholder="Nuevo horario de cierre">
+            </div>
+            <div class="col-auto">
+                <input type="hidden" class="form-control" name="id" value="<%= club.getId() %>">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Modificar</button>
+            </div>
+        </form>
+        <br/>
+        <div id="result"></div>
       </div>
     </div>
 </div>
