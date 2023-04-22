@@ -39,7 +39,7 @@
 
       <form class="row g-3">
         <div class="col-md-6">
-          <label for="nombreJuego" class="form-label">Nombre del Club</label>
+          <label for="nombreJuego" class="form-label">Nombre del juego</label>
           <input type="text" class="form-control" id="nombreJuego" name="nomJuego" placeholder="Introducir aquí nombre del juego">
         </div>
         <div class="col-md-2">
