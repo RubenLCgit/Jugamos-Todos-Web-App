@@ -11,20 +11,8 @@
         $("#form1").on("submit", function(event) {
             event.preventDefault();
             var formValue = $(this).serialize();
-            $.post("search-club", formValue, function(data) {
-                $("#result").html(data);
-            });
-        });
-    });
-</script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#form2").on("submit", function(event) {
-            event.preventDefault();
-            var formValue = $(this).serialize();
-            $.post("search-juego", formValue, function(data) {
-                $("#result2").html(data);
+            $.post("add-player", formValue, function(data) {
+                $("#result1").html(data);
             });
         });
     });
@@ -37,11 +25,7 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Aplicación para gestión de Juegos y Eventos</h1>
         <p>
-          <a href="get-games.jsp" class="btn btn-dark my-2">Mostrar Juegos</a>
-          <a href="get-clubs.jsp" class="btn btn-dark my-2">Mostrar Clubs</a>
-          <a href="register-club.jsp" class="btn btn-dark my-2">Registrar club</a>
-          <a href="register-game.jsp" class="btn btn-dark my-2">Registrar juego</a>
-          <button type="button" class="btn btn-outline-secondary">Página principal</button>
+          <button type="button" class="btn btn-dark my-2">INICIO SESIÓN / REGISTRO</button>
         </p>
       </div>
     </div>
@@ -50,39 +34,54 @@
   <img src="https://analisisalcubo.es/wp-content/uploads/2015/07/IMG_6393-1024x768.jpg" class="card-img-top" alt="Estanteria con juegos de mesa" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
   <br/><br/>
 
-  <div class="container">
-        <h3>BUSCAR CLUB</h3>
-        <br/>
-        <form class="row g-3" id="form1">
-          <div class="col">
-            <input type="text" class="form-control" id="nombreClub" name="nom_club" placeholder="Nombre del club">
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" id="inputCp" name="cp" placeholder="Código Postal">
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Buscar</button>
-          </div>
+    <div style="max-width: 100%; margin: 2%; display: flex; justify-content: center; align-items: center; text-align: center">
+        <form action="enter-player" method="post" id="form2" style="margin: 5%; padding: 1%; border: solid black 5px; border-radius: 30px; background-color: grey; min-width: 40%">
+            <div class="mb-3">
+                <label for="InputUserName" class="form-label">Nombre de Usuario</label>
+                <input type="text" class="form-control" id="InputUserName" name="userName" required>
+            </div>
+            <div class="mb-3">
+                <label for="InputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="InputPassword" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-dark my-2">Entrar</button>
         </form>
-        <div id="result"></div>
         <br/><br/>
-        <h3>BUSCAR JUEGO</h3>
-        <br/>
-        <form class="row g-3" id="form2">
-            <div class="col">
-                <input type="text" class="form-control" id="nombreJuego" name="nomJuego" placeholder="Nombre del juego">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo de juego">
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </div>
-        </form>
-
-        <br/>
         <div id="result2"></div>
-  </div>
+        <br/><br/>
+    </div>
+
+    <div style="max-width: 100%; margin: 2%; display: flex; justify-content: center; align-items: center; text-align: center">
+        <form id="form1" style="margin: 5%; padding: 1%; border: solid black 5px; border-radius: 30px; background-color: grey; min-width: 40%">
+            <div class="mb-3">
+                <label for="registerFirstName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="registerFirstName" name="nomJugador" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerLastNames" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="registerLastNames" name="apellidos" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerPhoneNumber" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="registerPhoneNumber" name="telefono" required>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Fecha de nacimiento</label>
+                <input type="date" id="date" name="fecha_nac" value="01-01-2020" min="01-01-1950" max="01-01-2023">
+            </div>
+            <div class="mb-3">
+                <label for="registerUserName" class="form-label">Nombre de Usuario</label>
+                <input type="text" class="form-control" id="registerUserName" name="userName" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="registerPassword" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-dark my-2">Registrarse</button>
+        </form>
+        <div id="result1"></div>
+        <br/><br/>
+    </div>
 
 </main>
 

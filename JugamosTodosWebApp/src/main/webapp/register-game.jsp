@@ -25,11 +25,12 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Aplicación para gestión de Juegos y Eventos</h1>
         <p>
-          <a href="index.jsp" class="btn btn-dark my-2">Página principal</a>
+          <a href="home.jsp" class="btn btn-dark my-2">Página principal</a>
           <a href="get-games.jsp" class="btn btn-dark my-2">Mostrar Juegos</a>
           <a href="get-clubs.jsp" class="btn btn-dark my-2">Mostrar Clubs</a>
           <a href="register-club.jsp" class="btn btn-dark my-2">Registrar club</a>
           <button type="button" class="btn btn-outline-secondary">Registrar juego</button>
+          <a href="index.jsp" class="btn btn-dark my-2">Salir</a>
         </p>
       </div>
     </div>
