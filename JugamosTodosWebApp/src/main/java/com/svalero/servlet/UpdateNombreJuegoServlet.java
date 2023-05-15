@@ -30,7 +30,7 @@ public class UpdateNombreJuegoServlet extends HttpServlet {
         }
         Database.connect();
         try {
-            Juego juego = Database.jdbi.withExtension(JuegoDAO.class, dao -> {
+            Database.jdbi.withExtension(JuegoDAO.class, dao -> {
                 dao.modificarNomJuego(nomJuego.trim(), id.trim());
                 return null;
             });

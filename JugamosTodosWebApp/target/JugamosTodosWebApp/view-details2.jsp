@@ -77,7 +77,6 @@
 %>
 <div class="container">
     <div class="card mb-3">
-      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
 
         <form class="row g-3" id="form1">
