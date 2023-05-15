@@ -30,7 +30,7 @@ public class UpdateDuracionJuegoServlet extends HttpServlet {
         }
         Database.connect();
         try {
-            Juego juego = Database.jdbi.withExtension(JuegoDAO.class, dao -> {
+            Database.jdbi.withExtension(JuegoDAO.class, dao -> {
                 dao.modificarDuracionJuego(duracion_max.trim(), id.trim());
                 return null;
             });

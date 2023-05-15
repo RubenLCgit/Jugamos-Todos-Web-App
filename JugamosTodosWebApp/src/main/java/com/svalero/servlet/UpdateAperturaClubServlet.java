@@ -28,7 +28,7 @@ public class UpdateAperturaClubServlet extends HttpServlet {
         }
         Database.connect();
         try {
-            Club club = Database.jdbi.withExtension(ClubDAO.class, dao -> {
+            Database.jdbi.withExtension(ClubDAO.class, dao -> {
                 dao.modificarApertClub(hor_apert.trim(), id.trim());
                 return null;
             });

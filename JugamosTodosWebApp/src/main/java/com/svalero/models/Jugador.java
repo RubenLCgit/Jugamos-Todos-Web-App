@@ -19,4 +19,8 @@ public class Jugador {
     private LocalDate fecha_nac;
     @NonNull
     private String telefono;
+    @NonNull
+    private String userName;
+    @NonNull
+    private String password;
 }

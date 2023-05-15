@@ -28,7 +28,7 @@ public class UpdateNumeroClubServlet extends HttpServlet {
         }
         Database.connect();
         try {
-            Club club = Database.jdbi.withExtension(ClubDAO.class, dao -> {
+            Database.jdbi.withExtension(ClubDAO.class, dao -> {
                 dao.modificarNumClub(num_calle.trim(), id.trim());
                 return null;
             });

@@ -5,11 +5,13 @@ C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\dao\JuegoDAO.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\SearchJuegoServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\DeleteClubServlet.java
+C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\dao\JugadorDAO.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\AddClubServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateDuracionJuegoServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateCalleClubServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\models\Torneo.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\Utils\Constants.java
+C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\EnterPlayerServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\models\Jugador.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateCierreClubServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateNombreClubServlet.java
@@ -23,4 +25,6 @@ C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\dao\ClubDAO.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\UpdateTipoJuegoServlet.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\models\Juego.java
+C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\dao\JugadorMapper.java
 C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\SearchClubServlet.java
+C:\Users\Usuario\Desktop\Programacion\AA\Jugamos-Todos-Web-App\Jugamos-Todos-Web-App\JugamosTodosWebApp\src\main\java\com\svalero\servlet\AddPlayerServlet.java

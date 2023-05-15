@@ -28,7 +28,7 @@ public class DeleteClubServlet extends HttpServlet {
         }
         Database.connect();
         try {
-            Club club = Database.jdbi.withExtension(ClubDAO.class, dao -> {
+            Database.jdbi.withExtension(ClubDAO.class, dao -> {
                 dao.borrarClub(id.trim());
                 return null;
             });
